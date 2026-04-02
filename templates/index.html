@@ -12,7 +12,7 @@
 <body>
 
     <header class="terminal-header">
-        <p>Welcome to my personal website </p>
+        <p>Welcome to my personal website ~</p>
     </header>
 
     <section class="hero">
@@ -31,8 +31,19 @@
                 </p>
 
                 <div class="links">
-                    <a href="https://github.com/CodeBook666">GitHub</a>
-                    <a href="https://linkedin.com/in/kenulibulathsinghela">LinkedIn</a>
+                    <a href="https://github.com/CodeBook666" target="_blank">GitHub</a>
+                    <a href="https://linkedin.com/in/kenulibulathsinghela" target="_blank">LinkedIn</a>
+
+                    <div class="dropdown">
+                        <button class="dropbtn">Download CV ▾</button>
+                        <div class="dropdown-content">
+                           <a href="{{ url_for('static', filename='cv/Kenuli-Bulathsinghela-Data-Analyst.pdf') }}" download>
+                            Data Analyst</a>
+
+                            <a href="{{ url_for('static', filename='cv/Kenuli-Bulathsinghela-Project-Manager.pdf') }}" download>
+                            Project Manager </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 

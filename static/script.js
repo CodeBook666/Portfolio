@@ -1,4 +1,4 @@
-const text = "Kenuli Bulathsinghela";
+const text = "Kenuli Dinethma Bulathsinghela";
 
 let i = 0;
 function typing() {
