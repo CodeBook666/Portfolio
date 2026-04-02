@@ -1,4 +1,4 @@
-const text = "kenuli@portfolio ~ /portfolio";
+const text = "Kenuli Bulathsinghela";
 
 let i = 0;
 function typing() {
