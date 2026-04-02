@@ -1,0 +1,128 @@
+body {
+    background: #0d0d0d;
+    color: #e5e5e5;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+}
+
+.terminal-header {
+    padding: 15px;
+    background: #000;
+    border-bottom: 1px solid #333;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 10px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00ff9f;
+}
+
+.hero h1 {
+    font-size: 50px;
+}
+
+.links a {
+    color: #00ff9f;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.grid div {
+    background: #15151D;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #00ff9f;
+}
+
+.project {
+    margin-bottom: 40px;
+    border-left: 2px solid #00ff9f;
+    padding-left: 20px;
+}
+
+.project-filters {
+    margin: 30px 0;
+}
+
+.project-filters button {
+
+    background: #15151D;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    margin-right: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.project-filters button:hover {
+    background:#00ff9f;
+    color: #000;
+}
+
+.about {
+    text-align: justify;
+}
+
+.skills-table {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.skill-column {
+    background: #15151D;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.skill-column h3 {
+    color: #00ff9f;
+    margin-bottom: 15px;
+}
+
+.skill-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-column li {
+    margin: 8px 0;
+    border-bottom: 1px solid #2a2a2a;
+    padding-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #333;
+}
