@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Kenuli Bulathsinghela</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+    <script defer src="static/script.js"></script>
+
 </head>
 
 <body>
@@ -17,8 +18,7 @@
     <section class="hero">
         <div class="hero-container">
             <div class="hero-text">
-
-                <h1>Kenuli Bulathsinghela</h1>
+                <h1 id="typed-text">Kenuli Bulathsinghela</h1>
 
                 <h3>
                     Data Analyst • Developer • Project Management
@@ -37,7 +37,7 @@
             </div>
 
             <div class="hero-image">
-                <img src="images/portfolio.png" alt="Kenuli Bulathsinghela">
+                <img src="static/portfolio.png" alt="Kenuli Bulathsinghela">
             </div>
         </div>
     </section>
@@ -68,14 +68,11 @@
                 <h3>Project Management</h3>
                 <p>Agile planning, Jira boards, sprint management.</p>
             </div>
-
         </div>
 
     </section>
 
-
     <section class="about">
-
         <h2>About</h2>
 
         <p class="about">
@@ -100,13 +97,13 @@
 
         <div class="project-filters">
             <button onclick="filterProjects('all')">All</button>
-            <button onclick="filterProjects('data')">Data Analyst</button>
-            <button onclick="filterProjects('pm')">Project Manager</button>
-            <button onclick="filterProjects('dev')">Developer</button>
+            <button onclick="filterProjects('data')">📊 Data Analyst</button>
+            <button onclick="filterProjects('pm')">🗂 Project Manager</button>
+            <button onclick="filterProjects('dev')">💻 Developer</button>
         </div>
 
         <div class="project data">
-            <h3>Financial Performance Dashboard</h3>
+            <h3>📈 Financial Performance Dashboard</h3>
             <p>
                 Built a Power BI dashboard analyzing revenue,
                 expenses and profitability trends.
@@ -115,7 +112,7 @@
         </div>
 
         <div class="project data">
-            <h3>Customer Churn Prediction</h3>
+            <h3>🤖 Customer Churn Prediction</h3>
             <p>
                 Machine learning model predicting telecom
                 customer churn using Python and Scikit-learn.
@@ -123,15 +120,15 @@
         </div>
 
         <div class="project data">
-            <h3>Sales Data Analysis</h3>
+            <h3>🛒 Sales Data Analysis</h3>
             <p>
                 SQL queries and visualizations analyzing
                 sales performance and customer behavior.
             </p>
         </div>
-        
+
         <div class="project data">
-            <h3>Marketing Campaign Analysis</h3>
+            <h3>📣 Marketing Campaign Analysis</h3>
             <p>
                 A/B testing and statistical analysis of
                 marketing campaign effectiveness.
@@ -139,7 +136,7 @@
         </div>
 
         <div class="project dev">
-            <h3>Eye Clinic Appointment System</h3>
+            <h3>👁 Eye Clinic Appointment System</h3>
             <p>
                 Developed a software system allowing patients
                 to book appointments and clinics to manage operations.
@@ -147,7 +144,7 @@
         </div>
 
         <div class="project dev">
-            <h3>RentMate Smart Rental System</h3>
+            <h3>🏠 RentMate Smart Rental System</h3>
             <p>
                 Mobile application managing boarding houses
                 and rental properties.
@@ -155,36 +152,36 @@
         </div>
 
         <div class="project dev">
-            <h3>Library Management System</h3>
+            <h3>📚 Library Management System</h3>
             <p>
                 Web-based system for managing library operations, including
                 book inventory, member management, and borrowing processes.
             </p>
         </div>
 
-         <div class="project pm">
-            <h3>Agile Project Management</h3>
+        <div class="project pm">
+            <h3>📝 Agile Project Management</h3>
             <p>
                 Managed software development projects using
                 Agile methodologies and Jira for task tracking.
             </p>
-
         </div>
-            <div class="project pm">
-                <h3>Data Analytics Project Coordination</h3>
-                <p>
-                    Coordinated data analytics projects, ensuring
-                    timely delivery of insights and visualizations.
-                </p>
-            </div>
 
-            <div class="project pm">
-                <h3>Cross-functional Team Leadership</h3>
-                <p>
-                    Led cross-functional teams in delivering
-                    software and analytics solutions.
-                </p>
-            </div>
+        <div class="project pm">
+            <h3>📊 Data Analytics Project Coordination</h3>
+            <p>
+                Coordinated data analytics projects, ensuring
+                timely delivery of insights and visualizations.
+            </p>
+        </div>
+
+        <div class="project pm">
+            <h3>🤝 Cross-functional Team Leadership</h3>
+            <p>
+                Led cross-functional teams in delivering
+                software and analytics solutions.
+            </p>
+        </div>
 
     </section>
 
@@ -241,18 +238,33 @@
 
     <section class="contact">
 
-        <h2>Contact</h2>
+        <h2>Contact Me</h2>
 
-        <p>Email: kenulibulathsinghela@gmail.com</p>
-        <p>Phone: +94 776987292</p>
+        <p>If you'd like to collaborate, discuss a project, or just say hello — send me a message.</p>
 
+        <div class="contact-container" id="contact-form">
+             {% with messages = get_flashed_messages(with_categories=true) %}
+             {% if messages %}
+                <div class="flash-messages">
+                 {% for category, message in messages %}
+                 <div class="flash {{ category }}">{{ message }}</div>
+                 {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+
+  <form action="/send_email" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Subject">
+      <textarea name="message" placeholder="Your Message..." rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+  </form>
+</div>
     </section>
-
-
+<br>
     <footer>
-
         <p>© 2026 Kenuli Bulathsinghela</p>
-
     </footer>
 
 </body>
