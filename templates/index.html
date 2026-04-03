@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenuli Bulathsinghela</title>
     <link rel="stylesheet" href="static/style.css">
     <script defer src="static/script.js"></script>
@@ -215,7 +216,6 @@
                 </ul>
             </div>
 
-
             <div class="skill-column">
                 <h3>Project Management</h3>
                 <ul>
@@ -229,7 +229,6 @@
                     <li>Team Coordination</li>
                 </ul>
             </div>
-
 
             <div class="skill-column">
                 <h3>Software Development</h3>
@@ -245,7 +244,6 @@
                 </ul>
             </div>
         </div>
-
     </section>
 
     <section class="contact">
@@ -262,8 +260,8 @@
                  <div class="flash {{ category }}">{{ message }}</div>
                  {% endfor %}
         </div>
-    {% endif %}
-    {% endwith %}
+                {% endif %}
+                {% endwith %}
 
   <form action="/send_email" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
