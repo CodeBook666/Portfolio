@@ -7,7 +7,7 @@ app = Flask(__name__)
 app.secret_key = "supersecretkey123"  # Required for flash messages
 
 SENDER_EMAIL = "kenulibulathsinghela@gmail.com"
-APP_PASSWORD = "kdnj zdkh emzx mkza"
+APP_PASSWORD = "kdnjzdkhemzxmkza"
 
 @app.route("/")
 def index():
@@ -35,7 +35,7 @@ Message: {message}
     msg.attach(MIMEText(body, "plain"))
 
     try:
-        server = smtplib.SMTP("smtp.gmail.com", 587)
+        server = smtplib.SMTP("smtp.gmail.com", 587, timeout=10)
         server.starttls()
         server.login(SENDER_EMAIL, APP_PASSWORD)
         server.send_message(msg)
